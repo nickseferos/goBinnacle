@@ -14,4 +14,12 @@ class CreateSatires < ActiveRecord::Migration
   def self.down
     drop_table :satires
   end
+
+  def up
+    add_attachment :satires, :image
+  end
+
+  def down
+    remove_attachemnt :satires, :image
+  end
 end
