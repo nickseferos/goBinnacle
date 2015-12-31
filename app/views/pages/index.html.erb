@@ -32,9 +32,12 @@
 	<div class="medium-3 columns">
 		<% @events.each do |e| %>
 			<h5><%= e.name %></h5>
-			<h5 class="subheader"><%= e.date.strftime("%a, %b %d") %></h5>
-			<h6 class="subheader"><i class="fi-marker"></i><%= e.location %></h6>
+			<h6 class="subheader"><%= e.date.strftime("%a, %b %d") %> | <%= e.start.strftime("%H:%M") %> to <%= e.end.strftime("%H:%M") %></h6>
+			<h6 class="subheader"><i class="fi-marker"></i> 
+				<%= e.location %>
+			</h6>
 			<p><%= e.description %></p>
+			<hr>
 		<% end %>
 	</div>
 </div>

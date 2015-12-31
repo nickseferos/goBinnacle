@@ -5,6 +5,8 @@
 		<tr>
 			<th><%= casein_sort_link "Name", :name %></th>
 			<th><%= casein_sort_link "Date", :date %></th>
+			<th><%= casein_sort_link "Start", :start %></th>
+			<th><%= casein_sort_link "End", :end %></th>
 			<th><%= casein_sort_link "Location", :location %></th>
 			<th><%= casein_sort_link "Description", :description %></th>
 			<th><%= casein_sort_link "Link", :link %></th>
@@ -16,6 +18,8 @@
 		<tr>
 			<td><%= casein_table_cell_link event.name, casein_event_path(event) %></td>
 			<td><%= casein_table_cell_link event.date, casein_event_path(event) %></td>
+			<td><%= casein_table_cell_link event.start, casein_event_path(event) %></td>
+			<td><%= casein_table_cell_link event.end, casein_event_path(event) %></td>
 			<td><%= casein_table_cell_link event.location, casein_event_path(event) %></td>
 			<td><%= casein_table_cell_link event.description, casein_event_path(event) %></td>
 			<td><%= casein_table_cell_link event.link, casein_event_path(event) %></td>

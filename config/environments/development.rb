@@ -39,9 +39,9 @@ Rails.application.configure do
   #Paperclip configuration
   Paperclip.options[:command_path] = "/usr/local/bin/convert"
 
-  config.paperclip_defaults = {
-  :storage => :s3,
-  :s3_host_name => 'REMOVE_THIS_LINE_IF_UNNECESSARY',
-  :bucket => 'gobinnacle-media-storage'
-  }
+  # config.paperclip_defaults = {
+  # :storage => :s3,
+  # :s3_host_name => 'REMOVE_THIS_LINE_IF_UNNECESSARY',
+  # :bucket => 'gobinnacle-media-storage'
+  # }
 end

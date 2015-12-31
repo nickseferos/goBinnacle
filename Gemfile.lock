@@ -120,6 +120,8 @@ GEM
     multi_json (1.11.2)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
+    open-weather (0.11.0)
+      json
     paperclip (4.3.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -210,6 +212,7 @@ DEPENDENCIES
   foundation-rails
   jbuilder (~> 2.0)
   jquery-rails
+  open-weather
   paperclip (~> 4.3)
   pg (~> 0.15)
   puma
