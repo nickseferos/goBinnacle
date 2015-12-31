@@ -1,6 +1,6 @@
 class SatireController < ApplicationController
   def show
-  	@satire = Satire.find_by_slug!(params[:id])
+  	@satire = Satire.find params[:id]
   end
   def index
     @satires = Satire.where('date <= ?', Date.today).order(:date)

@@ -23,7 +23,7 @@ gem 'aws-sdk', '>= 2.0.0'
 gem 'foundation-rails'
 gem 'foundation-icons-sass-rails'
 gem 'open-weather'
-gem 'friendly_id', '~> 5.1.0'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
