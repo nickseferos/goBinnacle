@@ -1,12 +1,27 @@
 Rails.application.routes.draw do
 
+  root 'pages#index'
+  get 'pages/index'
+
+  get 'pages/satire'
+
+  get 'pages/editorial'
+
+  get 'pages/other'
+
+  get 'pages/about'
+
+  get 'pages/write'
+
+  get 'pages/search'
+
 	#Casein routes
 	namespace :casein do
 		resources :others
 		resources :editorials
 		resources :satires
 	end
-
+  # match 'casein_config_homename', to: root_path, via: get
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

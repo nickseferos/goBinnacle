@@ -35,8 +35,13 @@ Rails.application.configure do
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
+
+  #Paperclip configuration
   Paperclip.options[:command_path] = "/usr/local/bin/convert"
 
-  # Raises error for missing translations
-  # config.action_view.raise_on_missing_translations = true
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_host_name => 'REMOVE_THIS_LINE_IF_UNNECESSARY',
+  :bucket => 'gobinnacle-media-storage'
+  }
 end
