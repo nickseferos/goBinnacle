@@ -12,4 +12,5 @@ class Satire < ActiveRecord::Base
   validates :author, presence: true
   validates :title, presence: true, uniqueness: true
   validates :body, presence: true, length: { minimum: 50 }
+
 end
