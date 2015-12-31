@@ -27,7 +27,7 @@
 		<hr>
 		<h5 class="subheader">By: <%= @satire_last_post.author %></h5>
 		<p><%= @satire_last_post.body.html_safe.split[0...50].join(" ")+"..." %></p>
-		<%= link_to'Continue Reading', root_path %>
+		<%= link_to'Continue Reading', satire_path(@satire_last_post.title) %>
 	</div>
 	<div class="medium-3 columns">
 		<% @events.each do |e| %>

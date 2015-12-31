@@ -1,17 +1,23 @@
 Rails.application.routes.draw do
 
+  resources :satire
+  get 'other/show'
+
+  get 'editorial/show'
+
+  get 'satire/show'
+
   root 'pages#index'
-  get 'pages/index'
 
-  get 'pages/satire'
+  get 'satire' => 'satire#index'
 
-  get 'pages/editorial'
+  get 'editorial' => 'pages#editorial'
 
-  get 'pages/other'
+  get 'other' => 'pages#other'
 
-  get 'pages/about'
+  get 'about' => 'pages#about'
 
-  get 'pages/write'
+  get 'write' => 'pages/write'
 
   get 'pages/search'
 
