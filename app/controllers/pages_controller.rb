@@ -1,6 +1,9 @@
 class PagesController < ApplicationController
   def index
-    @satire_last = Satire.last
+    @satire_last_post = Satire.last
+    @editorial_last_post = Editorial.last
+    @other_last_post = Other.last
+    @events = Event.order(:date).limit(3)
   end
 
   def satire

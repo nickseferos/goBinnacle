@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
 	#Casein routes
 	namespace :casein do
+		resources :events
 		resources :others
 		resources :editorials
 		resources :satires

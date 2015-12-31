@@ -21,6 +21,7 @@ gem 'puma'
 gem "paperclip", "~> 4.3"
 gem 'aws-sdk', '>= 2.0.0'
 gem 'foundation-rails'
+gem 'foundation-icons-sass-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

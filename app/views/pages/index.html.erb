@@ -1,2 +1,60 @@
 <% content_for :title, 'Maritimes Number One News Source | goBinnacle' %>
 <% content_for :meta, 'Blerg!' %>
+<div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <%= link_to image_tag('logo.png'), root_path %>
+      <li class="has-submenu">
+        <a href="#">Satire</a>
+      </li>
+      <li><%= link_to 'Editorial', root_path %></li>
+      <li><a href="#">Other</a></li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><input type="search" placeholder="Search"></li>
+      <li><button type="button" class="button">Search</button></li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+	<div class="small-12 medium-6 columns">
+		<%= image_tag(@satire_last_post.image) %>
+	</div>
+	<div class="small-12 medium-3 columns">
+		<h2><%= @satire_last_post.title %></h2>
+		<hr>
+		<h5 class="subheader">By: <%= @satire_last_post.author %></h5>
+		<p><%= @satire_last_post.body.html_safe.split[0...50].join(" ")+"..." %></p>
+		<%= link_to'Continue Reading', root_path %>
+	</div>
+	<div class="medium-3 columns">
+		<% @events.each do |e| %>
+			<h5><%= e.name %></h5>
+			<h5 class="subheader"><%= e.date.strftime("%a, %b %d") %></h5>
+			<h6 class="subheader"><i class="fi-marker"></i><%= e.location %></h6>
+			<p><%= e.description %></p>
+		<% end %>
+	</div>
+</div>
+<div class="row">
+	<div class="medium-2 columns">
+		<%= image_tag(@editorial_last_post.image) %>
+	</div>
+	<div class="medium-4 columns">
+		<h3><%= @editorial_last_post.title %></h3>
+		<hr>
+		<h6 class="subheader">By: <%= @editorial_last_post.author %></h6>
+		<p><%= @editorial_last_post.body.html_safe.split[0...40].join(" ")+"..." %></p>
+	</div>
+	<div class="medium-3 columns">
+		<h3><%= @other_last_post.title %></h3>
+		<%= image_tag(@other_last_post.image) %>
+		<hr>
+		<h6 class="subheader"><%= @other_last_post.author %></h6>
+		<p><%= @other_last_post.body.html_safe.split[0...30].join(" ")+"..." %></p>
+
+	</div>
+	<div class="medium-3 columns">WX</div>
+</div>
