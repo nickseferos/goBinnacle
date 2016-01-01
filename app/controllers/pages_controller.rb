@@ -6,18 +6,6 @@ class PagesController < ApplicationController
     @events = Event.where('date >= ?', Date.today).order(:date).limit(3)
   end
 
-  def satire
-    @satires = Satire.where('date <= ?', Date.today).order(:date)
-  end
-
-  def editorial
-    @editorials = Editorial.where('date <= ?', Date.today).order(:date)
-  end
-
-  def other
-    @others = Other.where('date <= ?', Date.today).order(:date)
-  end
-
   def about
   end
 

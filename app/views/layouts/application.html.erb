@@ -15,7 +15,24 @@
   </head>
 
   <body>
-
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <%= link_to image_tag('logo.png'), root_path %>
+          <li class="has-submenu">
+            <%= link_to 'Satire', root_path %>
+          </li>
+          <li><%= link_to 'Editorial', root_path %></li>
+          <li><%= link_to 'Other', root_path %></li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><input type="search" placeholder="Search"></li>
+          <li><button type="button" class="button">Search</button></li>
+        </ul>
+      </div>
+    </div>
     <%= yield %>
 
   </body>
