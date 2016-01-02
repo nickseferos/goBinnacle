@@ -3,6 +3,6 @@ class EditorialController < ApplicationController
   	@editorial = Editorial.find params[:id]
   end
   def index
-    @editorial = Editorial.where('date <= ?', Date.today).order(:date)
+    @editorials = Editorial.where('date <= ?', Date.today).order(:date).reverse.paginate(:page => params[:page], :per_page => 6)
   end
 end

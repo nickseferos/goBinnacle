@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   resources :satire
+  resources :other
+  resources :editorial
   get 'other/show'
 
   get 'editorial/show'

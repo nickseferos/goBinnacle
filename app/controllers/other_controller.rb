@@ -3,6 +3,6 @@ class OtherController < ApplicationController
   	@other = Other.find params[:id]
   end
   def index
-    @other = Other.where('date <= ?', Date.today).order(:date)
+    @others = Other.where('date <= ?', Date.today).order(:date).reverse.paginate(:page => params[:page], :per_page => 6)
   end
 end

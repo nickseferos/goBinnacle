@@ -1,3 +1,5 @@
+<% content_for :title, 'Satire | goBinnacle' %>
+<% content_for :meta, 'Read some of our satire and have a good laugh.' %>
 <div class="row">
   <div class="panel">
   	<div class="medium-9 columns">
@@ -7,7 +9,7 @@
   		</div>
   		<div class="medium-5 columns">
   			<h3><%= s.title %></h3><h6 class="subheader"> By <%= s.author %> on <%= s.date.strftime "%a, %b %d, %Y" %></h6>
-  			<p><%= s.body.html_safe.split[0...50].join(" ")+"..." %></p>
+  			<p class="text-justify"><%= s.body.html_safe.split[0...50].join(" ")+"..." %></p>
   			<%= link_to "Continue Reading <i class='fi-arrow-right'></i>".html_safe, satire_path(s) %>
   		</div>
   		<% end %>
