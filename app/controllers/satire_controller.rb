@@ -3,6 +3,6 @@ class SatireController < ApplicationController
   	@satire = Satire.find params[:id]
   end
   def index
-    @satires = Satire.where('date <= ?', Date.today).order(:date)
+    @satires = Satire.where('date <= ?', Date.today).order(:date).reverse
   end
 end

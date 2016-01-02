@@ -1,4 +1,21 @@
-<% @satires.each do |s| %>
-<%= s.title %>
-<%= link_to 'Continue Reading', satire_path(s) %>
-<% end %>
+<div class="row">
+  <div class="panel">
+  	<div class="medium-9 columns">
+  		<% @satires.each do |s| %>
+  		<div class="medium-7 columns">
+  			<%= link_to image_tag(s.image), satire_path(s) %>
+  		</div>
+  		<div class="medium-5 columns">
+  			<h3><%= s.title %></h3><h6 class="subheader"> By <%= s.author %> on <%= s.date.strftime "%a, %b %d, %Y" %></h6>
+  			<p><%= s.body.html_safe.split[0...50].join(" ")+"..." %></p>
+  			<%= link_to "Continue Reading <i class='fi-arrow-right'></i>".html_safe, satire_path(s) %>
+  		</div>
+  		<% end %>
+  	</div>
+  	<div class="medium-3 columns">
+  		<div>
+  			CONTENT FOR THE SIDE BAR GOES HERE> SOME COLOR?????? MAYBE I'M not REALLY SURE WHAT WILL GO HERE!!
+  		</div>
+  	</div>
+  </div>
+</div>

@@ -1,45 +1,48 @@
 <% content_for :title, 'Maritimes Number One News Source | goBinnacle' %>
 <% content_for :meta, 'Blerg!' %>
 <div class="row">
-	<div class="small-12 medium-6 medium-collapse large-collapse columns">
-		<%= image_tag(@satire_last_post.image) %>
-	</div>
-	<div class="small-12 medium-3 medium-collapse large-collapse columns">
-		<h2><%= @satire_last_post.title %></h2>
-		<hr>
-		<h5 class="subheader">By: <%= @satire_last_post.author %></h5>
-		<p><%= @satire_last_post.body.html_safe.split[0...50].join(" ")+"..." %></p>
-		<%= link_to'Continue Reading', satire_path(@satire_last_post.title) %>
-	</div>
-	<div class="medium-3 medium-collapse large-collapse columns">
-		<% @events.each do |e| %>
-			<h5><%= e.name %></h5>
-			<h6 class="subheader"><%= e.date.strftime("%a, %b %d") %> | <%= e.start.strftime("%H:%M") %> to <%= e.end.strftime("%H:%M") %></h6>
-			<h6 class="subheader"><i class="fi-marker"></i> 
-				<%= e.location %>
-			</h6>
-			<p><%= e.description %></p>
+	<div class="row">
+		<div class="small-12 medium-6 medium-collapse large-collapse columns">
+			<%= image_tag(@satire_last_post.image) %>
+		</div>
+		<div class="small-12 medium-3 medium-collapse large-collapse columns">
+			<h2><%= @satire_last_post.title %></h2>
 			<hr>
-		<% end %>
+			<h5 class="subheader">By: <%= @satire_last_post.author %></h5>
+			<p><%= @satire_last_post.body.html_safe.split[0...50].join(" ")+"..." %></p>
+			<%= link_to'Continue Reading', satire_path(@satire_last_post) %>
+		</div>
+		<div class="medium-3 medium-collapse large-collapse columns">
+			<% @events.each do |e| %>
+				<h5><%= e.name %></h5>
+				<h6 class="subheader"><%= e.date.strftime("%a, %b %d") %> | <%= e.start.strftime("%H:%M") %> to <%= e.end.strftime("%H:%M") %></h6>
+				<h6 class="subheader"><i class="fi-marker"></i> 
+					<%= e.location %>
+				</h6>
+				<p><%= e.description %></p>
+				<hr>
+			<% end %>
+		</div>
 	</div>
-</div>
-<div class="row">
-	<div class="medium-2 medium-collapse large-collapse columns">
-		<%= image_tag(@editorial_last_post.image) %>
-	</div>
-	<div class="medium-4 medium-collapse large-collapse columns">
-		<h3><%= @editorial_last_post.title %></h3>
-		<hr>
-		<h6 class="subheader">By: <%= @editorial_last_post.author %></h6>
-		<p><%= @editorial_last_post.body.html_safe.split[0...40].join(" ")+"..." %></p>
-	</div>
-	<div class="medium-3 medium-collapse large-collapse columns">
-		<h3><%= @other_last_post.title %></h3>
-		<%= image_tag(@other_last_post.image) %>
-		<hr>
-		<h6 class="subheader"><%= @other_last_post.author %></h6>
-		<p><%= @other_last_post.body.html_safe.split[0...30].join(" ")+"..." %></p>
+	<div class="row">
+		<div class="medium-2 medium-collapse large-collapse columns">
+			<%= image_tag(@editorial_last_post.image) %>
+		</div>
+		<div class="medium-4 medium-collapse large-collapse columns">
+			<h3><%= @editorial_last_post.title %></h3>
+			<hr>
+			<h6 class="subheader">By: <%= @editorial_last_post.author %></h6>
+			<p><%= @editorial_last_post.body.html_safe.split[0...40].join(" ")+"..." %></p>
+      <%= link_to'Continue Reading', satire_path(@satire_last_post) %>
+		</div>
+		<div class="medium-3 medium-collapse large-collapse columns">
+			<h3><%= @other_last_post.title %></h3>
+			<%= image_tag(@other_last_post.image) %>
+			<hr>
+			<h6 class="subheader"><%= @other_last_post.author %></h6>
+			<p><%= @other_last_post.body.html_safe.split[0...30].join(" ")+"..." %></p>
 
+		</div>
+		<div class="medium-3 medium-collapse large-collapse columns">WX</div>
 	</div>
-	<div class="medium-3 medium-collapse large-collapse columns">WX</div>
 </div>
