@@ -13,9 +13,9 @@ Rails.application.routes.draw do
 
   get 'satire' => 'satire#index'
 
-  get 'editorial' => 'pages#editorial'
+  get 'editorial' => 'editorial#index'
 
-  get 'other' => 'pages#other'
+  get 'other' => 'other#index'
 
   get 'about' => 'pages#about'
 

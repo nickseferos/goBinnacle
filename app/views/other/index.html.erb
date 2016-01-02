@@ -1,0 +1,24 @@
+<% content_for :title, 'Satire | goBinnacle' %>
+<% content_for :meta, 'Read some of our satire and have a good laugh.' %>
+<div class="row">
+  <div class="panel">
+  	<div class="medium-9 columns">
+  		<% @others.each do |o| %>
+  		<div class="medium-7 columns">
+  			<%= link_to image_tag(o.image), other_path(o) %>
+  		</div>
+  		<div class="medium-5 columns">
+  			<h3><%= o.title %></h3><h6 class="subheader"> By <%= o.author %> on <%= o.date.strftime "%a, %b %d, %Y" %></h6>
+  			<p class="text-justify"><%= o.body.html_safe.split[0...50].join(" ")+"..." %></p>
+  			<%= link_to "Continue Reading <i class='fi-arrow-right'></i>".html_safe, other_path(o) %>
+  		</div>
+  		<% end %>
+      <%= will_paginate @others %>
+  	</div>
+  	<div class="medium-3 columns">
+  		<div>
+  			CONTENT FOR THE SIDE BAR GOES HERE> SOME COLOR?????? MAYBE I'M not REALLY SURE WHAT WILL GO HERE!!
+  		</div>
+  	</div>
+  </div>
+</div>
