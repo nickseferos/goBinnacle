@@ -1,0 +1,24 @@
+<% content_for :title, 'Editorials | goBinnacle' %>
+<% content_for :meta, 'Read up on everything Maritime.' %>
+<div class="row">
+  <div class="panel">
+  	<div class="medium-9 columns">
+  		<% @editorials.each do |e| %>
+  		<div class="medium-7 columns">
+  			<%= link_to image_tag(e.image), editorial_path(e) %>
+  		</div>
+  		<div class="medium-5 columns">
+  			<h3><%= e.title %></h3><h6 class="subheader"> By <%= e.author %> on <%= e.date.strftime "%a, %b %d, %Y" %></h6>
+  			<p class="text-justify"><%= e.body.html_safe.split[0...50].join(" ")+"..." %></p>
+  			<%= link_to "Continue Reading <i class='fi-arrow-right'></i>".html_safe, editorial_path(e) %>
+  		</div>
+  		<% end %>
+      <%= will_paginate @editorials %>
+  	</div>
+  	<div class="medium-3 columns">
+  		<div>
+  			CONTENT FOR THE SIDE BAR GOES HERE> SOME COLOR?????? MAYBE I'M not REALLY SURE WHAT WILL GO HERE!!
+  		</div>
+  	</div>
+  </div>
+</div>
