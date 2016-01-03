@@ -3800,4 +3800,9 @@ padding: 4rem; }
   .footer .links a:last-child::after {
     content: "";
       padding: 0 0.4rem 0 0.8rem; }
+
+.boxed {
+  border-style: solid;
+  border: 1px;
+}
 /*# sourceMappingURL=foundation.css.map */
